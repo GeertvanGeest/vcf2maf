@@ -462,7 +462,7 @@ unless( $inhibit_vep ) {
     my $vep_cmd = "$perl_bin '$vep_script' --species $species --assembly $ncbi_build";
     $vep_cmd .= " --no_progress" unless( $verbose );
     $vep_cmd .= " --no_stats" unless( $vep_stats );
-    $vep_cmd .= " --buffer_size $buffer_size --sift b --ccds";
+    $vep_cmd .= " --buffer_size $buffer_size --ccds";
     $vep_cmd .= " --uniprot --hgvs --symbol --numbers --domains --gene_phenotype --canonical";
     $vep_cmd .= " --protein --biotype --uniprot --tsl --variant_class --shift_hgvs 1";
     $vep_cmd .= " --check_existing --total_length --allele_number --no_escape --xref_refseq";
@@ -514,7 +514,7 @@ my @maf_header = qw(
 # Add extra annotation columns to the MAF in a consistent order
 my @ann_cols = qw( Allele Gene Feature Feature_type Consequence cDNA_position CDS_position
     Protein_position Amino_acids Codons Existing_variation ALLELE_NUM DISTANCE STRAND_VEP SYMBOL
-    SYMBOL_SOURCE HGNC_ID BIOTYPE CANONICAL CCDS ENSP SWISSPROT TREMBL UNIPARC RefSeq SIFT PolyPhen
+    SYMBOL_SOURCE HGNC_ID BIOTYPE CANONICAL CCDS ENSP SWISSPROT TREMBL UNIPARC RefSeq PolyPhen
     EXON INTRON DOMAINS AF AFR_AF AMR_AF ASN_AF EAS_AF EUR_AF SAS_AF AA_AF EA_AF CLIN_SIG SOMATIC
     PUBMED MOTIF_NAME MOTIF_POS HIGH_INF_POS MOTIF_SCORE_CHANGE IMPACT PICK VARIANT_CLASS TSL
     HGVS_OFFSET PHENO MINIMISED GENE_PHENO FILTER flanking_bps vcf_id vcf_qual gnomAD_AF gnomAD_AFR_AF
